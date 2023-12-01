@@ -1,3 +1,17 @@
+@font-face {
+    font-family: poppins-extra-bold;
+    src: url(./fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+    font-family: poppins-medium;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: poppins-regular;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+
 .form{
     display: flex;
     justify-content: center;
@@ -9,7 +23,7 @@
     min-width: 100px;
     padding: 5px;
     border: none;
-    border: 0.1px solid black;
+    border: 0.1px solid #dedfde;
     border-radius: 4px;
 }
 .inputSelNum:focus{
@@ -46,7 +60,7 @@ input[type="checkbox"] + label, input[type="radio"] + label , input[type="color"
     flex-grow: 1;
     padding: 10px;
     border: none;
-    border: 0.1px solid black;
+    border: 0.1px solid #dedfde;
     border-radius: 4px;
     outline: none;
 }

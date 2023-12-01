@@ -26,7 +26,10 @@ for(let row = 1; row <= rows; row++){
         const colElement = document.createElement("div");
         colElement.className = "cell";
         colElement.contentEditable = true;
+        colElement.id = `${String.fromCharCode(64+col)}${row}`;
         rowElement.appendChild(colElement);
+        colElement.addEventListener('focus',onFocusCellId);
+        colElement.addEventListener('input', onChangeCellText);
     }
     cellContainer.appendChild(rowElement);
 }
