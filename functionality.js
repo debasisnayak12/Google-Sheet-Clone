@@ -1,6 +1,7 @@
 let activeCellId = null;
 
 const activeCellElement = document.getElementById('active-cell');
+
 const form = document.querySelector('.form');
 const state = {};
 
@@ -22,7 +23,7 @@ function onChangeCellText(event){
     if(state[activeCellId]){
         state[activeCellId].text = changedText;
     }else{
-        state[activeCellId] = { ...defaultStyles, text:changedText };
+        state[activeCellId] = { ...defaultStyles, text: changedText };
     }
 }
 
@@ -97,10 +98,20 @@ function resetForm(styles){
 
 function exportData(){
     const jsonData = JSON.stringify(state);
-    const blob = new Blob([jsonData], {type:"text/plain"});
+    console.log(jsonData);
+    const blob = new Blob([jsonData], { type: "text/plain" });
+
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.download = "data.json";
     link.href = url;
     link.click();
 }
+
+
+function importData() {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.click();
+}
+

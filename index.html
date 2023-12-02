@@ -46,7 +46,8 @@
                 <input type="color" value="#ffffff" name="bgColor" id="bgcolor" />
                 <label for="bgcolor" class="material-icons">format_color_fill</label>
             </div>
-            <span onclick="exportData()" id="export" class="material-icons">cloud_upload</span>
+            <span onclick="exportData()" id="export" class="material-icons">cloud_download</span>
+            <span onclick="importData()" id="import" class="material-icons">cloud_upload</span>
         </form>
     </div>
     <div id="cell-state">
@@ -61,6 +62,11 @@
             <div id="sno"></div>
             <div id="body-container"></div>
         </div>
+    </div>
+    <div class="footer">
+        <button class="material-icons new-sheet">
+            post_add
+        </button>
     </div>
     
     <script src="functionality.js"></script>

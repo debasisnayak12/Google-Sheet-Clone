@@ -6,7 +6,7 @@
 
 #root{
     width: 100vw;
-    height: 75vh;
+    height: 70vh;
     overflow: scroll;
     position: relative;
 }
@@ -64,6 +64,7 @@
     height: 25px;
     min-width: 200px;
     border: 0.1px solid #eaeaea;
+    overflow: hidden;
 }
 .cell:focus{
     border: none;
@@ -73,7 +74,15 @@
     margin-inline: 2px;
 }
 
-#export{
+#export,#import{
     cursor: pointer;
     font-size: 32px !important;
+}
+
+.new-sheet{
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
